@@ -1,0 +1,231 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg,
+            #ff0080,
+            #7928ca,
+            #00c6ff,
+            #00ffb3,
+            #ff0080);
+
+    background-size: 400% 400%;
+
+    animation: tornasol 12s ease infinite;
+
+    color: white;
+
+    padding: 30px;
+}
+
+/* EFECTO TORNASOL */
+
+@keyframes tornasol {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* HEADER */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+header h1 {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+header p {
+
+    font-size: 22px;
+}
+
+/* CONTENEDOR */
+
+main {
+
+    max-width: 1300px;
+
+    margin: auto;
+}
+
+/* TARJETA */
+
+.mapa-card {
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* IMAGEN */
+
+.mapa-img img {
+
+    width: 500px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* INFO */
+
+.info {
+
+    flex: 1;
+}
+
+.info h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 30px;
+}
+
+/* BLOQUES */
+
+.ruta {
+
+    margin-bottom: 20px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ruta span {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #fff700;
+}
+
+.ruta p {
+
+    font-size: 22px;
+}
+
+/* BOTÓN */
+
+button {
+
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: linear-gradient(45deg,
+            #00c6ff,
+            #0072ff);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 20px;
+}
+
+button:hover {
+
+    transform: scale(1.03);
+
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* REGRESAR */
+
+.acciones {
+
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+.acciones a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    transition: 0.3s;
+}
+
+.acciones a:hover {
+
+    color: yellow;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+
+    .mapa-card {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .mapa-img img {
+
+        width: 100%;
+    }
+
+}

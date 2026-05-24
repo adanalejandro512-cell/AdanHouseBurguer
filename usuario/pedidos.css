@@ -1,0 +1,229 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg,
+            #ff0080,
+            #7928ca,
+            #00c6ff,
+            #00ffb3,
+            #ff0080);
+
+    background-size: 400% 400%;
+
+    animation: tornasol 12s ease infinite;
+
+    color: white;
+
+    padding: 30px;
+}
+
+/* EFECTO TORNASOL */
+
+@keyframes tornasol {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* HEADER */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+header h1 {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+header p {
+
+    font-size: 22px;
+}
+
+/* MAIN */
+
+main {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+/* PEDIDOS */
+
+.pedido {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.pedido:hover {
+
+    transform: scale(1.02);
+}
+
+/* IMAGEN */
+
+.pedido-img img {
+
+    width: 250px;
+
+    border-radius: 20px;
+}
+
+/* INFO */
+
+.pedido-info {
+
+    flex: 1;
+}
+
+.pedido-info h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.pedido-info p {
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+.pedido-info h3 {
+
+    color: #fff700;
+
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+/* ESTADOS */
+
+.estado {
+
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.preparando {
+
+    background: orange;
+
+    color: white;
+}
+
+.camino {
+
+    background: #00c6ff;
+
+    color: white;
+}
+
+.entregado {
+
+    background: #00ff88;
+
+    color: black;
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+footer a {
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+footer a:hover {
+
+    color: yellow;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+
+    .pedido {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .pedido-img img {
+
+        width: 100%;
+    }
+
+}

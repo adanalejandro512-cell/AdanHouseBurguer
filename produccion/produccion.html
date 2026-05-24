@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Producción</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <aside class="sidebar">
+            <div class="logo">🍔 HouseBurger</div>
+            <ul class="menu">
+                <li class="activo">
+                    <a href="pedidos.html">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        Pedidos
+                    </a>
+                </li>
+                <li>
+                    <a href="preparacion.html">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        En preparación
+                    </a>
+                </li>
+                <li>
+                    <a href="listos.html">
+                        <i class="fa-solid fa-box"></i>
+                        Listos para salir
+                    </a>
+                </li>
+                <li>
+                    <a href="historial.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Historial
+                    </a>
+                </li>
+                <li>
+                    <a href="inventario.html">
+                        <i class="fa-solid fa-warehouse"></i>
+                        Inventario
+                    </a>
+                </li>
+                <li>
+                    <a href="estadisticas.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Estadísticas
+                    </a>
+                </li>
+                <li>
+                    <a href="configuracion.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Configuración
+                    </a>
+                </li>
+            </ul>
+            <div class="estado-cocina">
+                <h4>Cocina</h4>
+                <p>En línea ●</p>
+            </div>
+        </aside>
+        <main class="contenido">
+            <header class="topbar">
+                <div>
+                    <h1>PANEL DE PRODUCCIÓN</h1>
+                    <span>Gestiona y prepara cada pedido</span>
+                </div>
+                <div class="acciones-top">
+                    <button onclick="abrirNotificaciones()">
+                        <i class="fa-regular fa-bell"></i>
+                        Notificaciones
+                    </button>
+                    <button onclick="cerrarSesion()">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Cerrar sesión
+                    </button>
+                </div>
+            </header>
+            <section class="cards">
+                <div class="card">
+                    <h3>Pedidos pendientes</h3>
+                    <span>8</span>
+                </div>
+                <div class="card azul">
+                    <h3>En preparación</h3>
+                    <span>5</span>
+                </div>
+                <div class="card verde">
+                    <h3>Listos para salir</h3>
+                    <span>3</span>
+                </div>
+                <div class="card cyan">
+                    <h3>Entregados hoy</h3>
+                    <span>23</span>
+                </div>
+            </section>
+            <section class="panel-central">
+                <div class="pedidos">
+                    <h2>COLA DE PEDIDOS</h2>
+                    <div class="pedido">
+                        <div>
+                            <h3>#1257</h3>
+                            <p>Hamburguesa Doble Cheese</p>
+                        </div>
+                        <div>
+                            <span class="estado rojo">
+                                En preparación
+                            </span>
+                            <button>
+                                Tiempo estimado: 6 min
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pedido">
+                        <div>
+                            <h3>#1258</h3>
+                            <p>Bacon Deluxe</p>
+                        </div>
+                        <div>
+                            <span class="estado naranja">
+                                En preparación
+                            </span>
+                            <button>
+                                Tiempo estimado: 4 min
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pedido">
+                        <div>
+                            <h3>#1259</h3>
+                            <p>Clásica BBQ</p>
+                        </div>
+                        <div>
+                            <span class="estado azul-estado">
+                                Listo para salir
+                            </span>
+                            <button>
+                                Marcar como entregado
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="inventario">
+                    <h2>INVENTARIO</h2>
+                    <ul>
+                        <li>🍖 Carne - 18kg</li>
+                        <li>🍞 Panes - 45</li>
+                        <li>🧀 Queso - 30</li>
+                        <li>🥬 Lechuga - 12</li>
+                        <li>🍅 Tomate - 15</li>
+                        <li>🍟 Papas - 22</li>
+                    </ul>
+                    <button class="btn-ver">
+                        Ver inventario completo
+                    </button>
+                </div>
+            </section>
+            <section class="alerta">
+                <div>
+                    🚨 ¡Nuevo pedido recibido! #1261
+                </div>
+                <button>
+                    Ver pedido
+                </button>
+            </section>
+        </main>
+    </div>
+    <div class="panel-notificaciones" id="panelNotificaciones">
+        <div class="encabezado-notificaciones">
+            <h2>Notificaciones</h2>
+            <button class="cerrar-panel" onclick="abrirNotificaciones()">✖</button>
+        </div>
+        <p>Nuevo pedido recibido</p>
+        <p>Pedido #1258 listo</p>
+        <p>Inventario bajo</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

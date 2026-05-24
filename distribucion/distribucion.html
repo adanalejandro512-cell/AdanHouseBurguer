@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Distribución BurgerHouse</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                🍔 HouseBurger
+            </div>
+
+            <nav>
+
+                <a href="entregas.html" class="activo">
+                    <i class="fa-solid fa-truck"></i>
+                    Entregas
+                </a>
+
+                <a href="mapa.html">
+                    <i class="fa-solid fa-map"></i>
+                    Mapa
+                </a>
+
+                <a href="historial.html">
+                    <i class="fa-solid fa-clock"></i>
+                    Historial
+                </a>
+
+                <a href="ganancias.html">
+                    <i class="fa-solid fa-money-bill"></i>
+                    Ganancias
+                </a>
+
+                <a href="perfil.html">
+                    <i class="fa-solid fa-user"></i>
+                    Perfil
+                </a>
+
+                <a href="soporte.html">
+                    <i class="fa-solid fa-headset"></i>
+                    Soporte
+                </a>
+
+            </nav>
+
+            <div class="estado">
+                <span class="online"></span>
+                En línea
+            </div>
+
+        </aside>
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+            <!-- HEADER -->
+
+            <header class="header">
+
+                <div>
+                    <h1>PANEL DE DISTRIBUCIÓN</h1>
+                    <p>Gestiona las entregas en tiempo real</p>
+                </div>
+
+                <div class="acciones">
+
+                    <button onclick="abrirNotificaciones()">
+                        <i class="fa-solid fa-bell"></i>
+                        Notificaciones
+                    </button>
+
+                    <button onclick="cerrarSesion()">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Cerrar sesión
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- CONTENIDO -->
+
+            <section class="contenido">
+
+                <!-- MAPA -->
+                <div class="mapa">
+                    <h3>MAPA DE ENTREGAS</h3>
+
+                    <img src="map.png" alt="Mapa">
+                </div>
+
+                <!-- PEDIDOS -->
+                <div class="pedidos">
+                    <h3>MIS ENTREGAS</h3>
+
+                    <div class="pedido">
+                        <h4>#Pedido</h4>
+                        <p>Nombre cliente</p>
+                        <p>Dirección</p>
+                        <span>En camino</span>
+                    </div>
+
+                    <div class="pedido">
+                        <h4>#Pedido</h4>
+                        <p>Nombre cliente</p>
+                        <p>Dirección</p>
+                        <span>Entregado</span>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="columna-derecha">
+
+                    <!-- ESTADO -->
+                    <div class="estado-pedido">
+
+                        <h3>ESTADO DEL PEDIDO</h3>
+
+                        <ul>
+                            <li>✔ Preparándose</li>
+                            <li>✔ Listo para salir</li>
+                            <li>✔ En camino</li>
+                            <li>○ Entregado</li>
+                        </ul>
+
+                    </div>
+
+                    <!-- CHAT -->
+                    <div class="chat">
+
+                        <h3>CHAT CON CLIENTE</h3>
+
+                        <div class="mensaje cliente">
+                            Hola, ¿ya viene mi pedido?
+                        </div>
+
+                        <div class="mensaje repartidor">
+                            Sí, voy en camino 🚴
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+
+            <section class="footer-cards">
+
+                <div class="card-footer">
+                    <h4>GANANCIAS HOY</h4>
+                    <p>$45.80</p>
+                </div>
+
+                <div class="card-footer">
+                    <h4>PEDIDOS ENTREGADOS</h4>
+                    <p>7</p>
+                </div>
+
+                <div class="card-footer">
+                    <h4>CALIFICACIÓN</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- PANEL -->
+
+    <div class="panel-notificaciones" id="panel">
+
+        <div class="top-panel">
+
+            <h2>Notificaciones</h2>
+
+            <button onclick="abrirNotificaciones()">
+                ✖
+            </button>
+
+        </div>
+
+        <div class="noti">
+            Nuevo pedido asignado
+        </div>
+
+        <div class="noti">
+            Pedido entregado correctamente
+        </div>
+
+        <div class="noti">
+            Cliente envió mensaje
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

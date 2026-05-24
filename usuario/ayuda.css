@@ -1,0 +1,270 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg,
+            #ff0080,
+            #7928ca,
+            #00c6ff,
+            #00ffb3,
+            #ff0080);
+
+    background-size: 400% 400%;
+
+    animation: tornasol 12s ease infinite;
+
+    color: white;
+
+    padding: 30px;
+}
+
+/* EFECTO TORNASOL */
+
+@keyframes tornasol {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* HEADER */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+header h1 {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+header p {
+
+    font-size: 22px;
+}
+
+/* MAIN */
+
+main {
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+/* BUSCADOR */
+
+.buscador {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.buscador input {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    outline: none;
+}
+
+.buscador button {
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(45deg,
+            #ff0080,
+            #00c6ff);
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.buscador button:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* FAQ */
+
+.faq {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+/* TARJETAS */
+
+.pregunta {
+
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.pregunta:hover {
+
+    transform: scale(1.02);
+}
+
+.pregunta h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+    color: #fff700;
+}
+
+.pregunta p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+/* CONTACTO */
+
+.contacto {
+
+    margin-top: 50px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.contacto h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+    color: #fff700;
+}
+
+.contacto p {
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.info-contacto {
+
+    margin-top: 20px;
+}
+
+.info-contacto p {
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+footer a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+footer a:hover {
+
+    color: yellow;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 700px) {
+
+    .buscador {
+
+        flex-direction: column;
+    }
+
+    .buscador button {
+
+        width: 100%;
+    }
+
+}

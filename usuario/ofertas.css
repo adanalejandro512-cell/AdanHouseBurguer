@@ -1,0 +1,241 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg,
+            #ff0080,
+            #7928ca,
+            #00c6ff,
+            #00ffb3,
+            #ff0080);
+
+    background-size: 400% 400%;
+
+    animation: tornasol 12s ease infinite;
+
+    color: white;
+
+    padding: 30px;
+}
+
+/* EFECTO TORNASOL */
+
+@keyframes tornasol {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* HEADER */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+header h1 {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+header p {
+
+    font-size: 22px;
+}
+
+/* MAIN */
+
+main {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+/* TARJETAS */
+
+.oferta {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.oferta:hover {
+
+    transform: scale(1.02);
+}
+
+/* IMAGENES */
+
+.oferta-img img {
+
+    width: 320px;
+
+    border-radius: 20px;
+}
+
+/* INFO */
+
+.oferta-info {
+
+    flex: 1;
+}
+
+.oferta-info h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.oferta-info p {
+
+    font-size: 19px;
+
+    margin-bottom: 20px;
+}
+
+/* PRECIOS */
+
+.precios {
+
+    margin-bottom: 20px;
+}
+
+.antes {
+
+    text-decoration: line-through;
+
+    color: #ffb3b3;
+
+    font-size: 24px;
+
+    margin-right: 20px;
+}
+
+.ahora {
+
+    color: #fff700;
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+/* BOTONES */
+
+button {
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(45deg,
+            #ff0080,
+            #00c6ff);
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+footer a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+footer a:hover {
+
+    color: yellow;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+
+    .oferta {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .oferta-img img {
+
+        width: 100%;
+    }
+
+}
